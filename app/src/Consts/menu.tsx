@@ -5,6 +5,8 @@ export interface MenuItem {
   title: string;
   icon: IconType;
   href: string;
+  element: JSX.Element;
+  topBar?: JSX.Element;
 }
 
 export interface MenuGroup {
@@ -20,11 +22,13 @@ export const menu: MenuGroup[] = [
         title: "Dashboard",
         icon: LuHouse,
         href: "/",
+        element: <div>Dashboard Page</div>,
       },
       {
         title: "Projects",
         icon: LuFolder,
         href: "/projects",
+        element: <div>Projects Page</div>,
       },
     ],
   },
@@ -35,11 +39,13 @@ export const menu: MenuGroup[] = [
         title: "Profile",
         icon: LuUser,
         href: "/profile",
+        element: <div>Profile Page</div>,
       },
       {
         title: "Settings",
         icon: LuCog,
         href: "/settings",
+        element: <div>Settings Page</div>,
       },
     ],
   },
